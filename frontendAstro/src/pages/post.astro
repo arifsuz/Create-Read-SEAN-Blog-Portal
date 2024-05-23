@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro"
+if (Astro.request.method === "POST") {
+    const formData = await Astro.request.formData();
+    const title = formData.get("title");
+    const description = formData.get("description");
+    const data = {title, description };
+    
+    
+    const response = await fetch("http://localhost:3030", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    });
+}
+---
+
+<Layout title="A Create A Post">
+    <h1 class="title-text">Create A Post</h1>
+    <div class="container">
+        <form method="POST">
+            <input placeholder="Input Title..." name="title" type="text">
+            <input placeholder="Input Description Content..." name="description" type="text">
+            <button type="submit">Create Post</button>
+        </form>
+    </div>
+</Layout>
+
+<style>
+    .title-text {
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+    }
+
+    button {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+    }
+</style>
