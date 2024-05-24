@@ -49,15 +49,15 @@ This Blog Portal project is a modern and responsive blogging platform, built usi
 
 #### **5. Development Flow**
 
-    1. **Project Setup**:
+   1. **Project Setup**:
    - Initialise the project with Node.js and install all necessary dependencies (`express`, `supabase`, `astro`, etc).
    - Configure the Supabase and create a new project, and set up the required database and tables (users, posts, comments).
 
-    2. **Build Backend**:
+   2. **Build Backend**:
    - Create an Express server and define routing for CRUD operations on blog posts, users, and comments.
    - Integrate with Supabase to store and retrieve data.
 
-    3. **Build Frontend**:
+   3. **Build Frontend**:
    - Use Astro to create pages and UI components.
    - Integrate with the backend through the API provided by the Express server.
 
@@ -156,7 +156,6 @@ http://localhost:3030/
         ‘id’: ‘123’,
         ‘title’: ‘Sample Blog’,
         ‘content’: ‘This is a sample blog post’
-    }
 }
 ```
 
@@ -210,7 +209,7 @@ Node.js installation on different operating systems has slight differences. The 
 
 1. **Using Homebrew**:
    If you are using Homebrew, installing Node.js is very simple. Run the following command in Terminal:
-   ``bash
+   ```bash
    brew install node
    ```
 
@@ -232,7 +231,7 @@ Installing Node.js on Linux can be done in several ways, one of the recommended 
 
 1. **Install nvm**:
    Run the following command to download and install nvm:
-   ``bash
+   ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
    ```
    Once the installation is complete, close and reopen the terminal or run the following command to load nvm:
@@ -242,7 +241,7 @@ Installing Node.js on Linux can be done in several ways, one of the recommended 
 
 2. **Install Node.js Using nvm**:
    With nvm installed, you can install the latest version of Node.js with the command:
-   ``bash
+   ```bash
    nvm install node
    ```
    You can also install a specific version, for example:
@@ -297,12 +296,12 @@ Astro is a modern framework for building fast, static websites. Installing Astro
    ```
 
 
-5. **Jalankan Server Pengembangan**:
-   Setelah semua dependensi terinstal, Anda bisa memulai server pengembangan dengan perintah:
+5. **Run the Development Server**:
+   Once all dependencies are installed, you can start the development server with the command:
    ```bash
    npm run dev
    ```
-   atau
+   or
    ```bash
    yarn dev
    ```
@@ -311,11 +310,11 @@ Astro is a modern framework for building fast, static websites. Installing Astro
 
 ### Deploying an Astro Project
 Once you have finished developing your site with Astro, you can build it for production and deploy it. To build the project, use the following command:
-``bash
+```bash
 npm run build
 ```
 or
-``bash
+```bash
 yarn build
 ```
 
