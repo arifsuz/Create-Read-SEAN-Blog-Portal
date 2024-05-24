@@ -1,142 +1,143 @@
-# Portal Blog Create Read SEAN
+# Create Read SEAN Blog Portal
 
-## Deskripsi
+## Description
 
-#### **1. Pendahuluan**
-Proyek Portal Blog ini adalah platform blogging yang modern dan responsif, dibangun menggunakan stack SEAN yang terdiri dari Supabase, Express, Astro, dan Node.js. Proyek ini dirancang untuk memungkinkan pengguna membuat, mengelola, dan membaca blog post dengan antarmuka yang ramah pengguna dan performa yang optimal.
+#### **1. Introduction**
+This Blog Portal project is a modern and responsive blogging platform, built using the SEAN stack consisting of Supabase, Express, Astro, and Node.js. The project is designed to allow users to create, manage, and read blog posts with a user-friendly interface and optimised performance.
 
-#### **2. Teknologi yang Digunakan**
+#### **2. Technology Used**
 
 1. **Supabase**:
-   - **Database**: Supabase menyediakan layanan backend yang mencakup database PostgreSQL yang di-host dan API otomatis yang dapat digunakan untuk menyimpan dan mengelola data blog post, pengguna, komentar, dan lain-lain.
-   - **Auth**: Layanan otentikasi yang mudah digunakan untuk mengelola login dan registrasi pengguna.
+   - **Database**: Supabase provides backend services that include a hosted PostgreSQL database and an automated API that can be used to store and manage data on blog posts, users, comments, and more.
+   - **Auth**: An easy-to-use authentication service to manage user login and registration.
 
 2. **Express**:
-   - **Server Backend**: Express adalah framework web untuk Node.js yang digunakan untuk membangun server backend. Ini akan menangani logika bisnis, routing, dan komunikasi antara frontend dan database Supabase.
+   - **Server Backend**: Express is a web framework for Node.js that is used to build a backend server. It will handle the business logic, routing, and communication between the frontend and the Supabase database.
 
 3. **Astro**:
-   - **Frontend**: Astro adalah framework modern untuk membangun situs web yang cepat dan optimal. Ini digunakan untuk membangun antarmuka pengguna (UI) yang statis dan dinamis untuk portal blog ini.
+   - **Frontend**: Astro is a modern framework for building fast and optimised websites. It is used to build a static and dynamic user interface (UI) for this blog portal.
    
 4. **Node.js**:
-   - **Runtime Environment**: Node.js menyediakan lingkungan runtime JavaScript yang memungkinkan kita untuk menjalankan kode server-side, termasuk aplikasi Express dan utilitas lainnya yang diperlukan untuk pengembangan.
+   - **Runtime Environment**: Node.js provides a JavaScript runtime environment that allows us to run server-side code, including Express applications and other utilities required for development.
 
-#### **3. Fitur Utama**
+#### **3. Key Features**
 
-- **Manajemen Blog Post**:
-  Pengguna yang telah terautentikasi dapat membuat, mengedit, dan menghapus blog post. Setiap blog post disimpan dalam database Supabase.
+- Blog Post Management**:
+  Authenticated users can create, edit and delete blog posts. Each blog post is stored in the Supabase database.
 
-- **Tampilan Responsif**:
-  Antarmuka pengguna dibangun dengan Astro untuk memastikan pengalaman yang responsif dan cepat di berbagai perangkat.
+- Responsive Interface**:
+  The user interface is built with Astro to ensure a responsive and fast experience across different devices.
 
-- **Logic Fullstack**:
-  Situs web ini dirancang untuk memberi gambaran bagaimana cara kerja sebuah sistem web base dengan Mendapatkan sebuah data dengan cara meminta persetujuan kepada API (SERVER) lalu divalidasi dan mengambil sebuah data didalam database dan memberikan respon ke tampilan utama (client).
+- Fullstack Logic**:
+  This website is designed to illustrate how a web-based system works by getting data by requesting approval from the API (SERVER) and then validating and retrieving data in the database and responding to the main display (client).
 
-#### **4. Struktur Proyek**
+#### **4. Project Structure**
 
 - **Backend**:
-  - `server.js`: File utama untuk menginisialisasi dan menjalankan server Express.
-  - `routes/`: Direktori yang berisi semua routing API untuk blog post, pengguna, dan komentar.
-  - `controllers/`: Direktori yang berisi logika bisnis untuk berbagai operasi CRUD.
-  - `models/`: Skema data dan model yang digunakan untuk berinteraksi dengan database Supabase.
+  - `server.js`: The main file to initialise and run the Express server.
+  - `routes/`: The directory containing all the routing APIs for blog posts, users, and comments.
+  - `controllers/`: The directory that contains the business logic for various CRUD operations.
+  - `models/`: The data schema and models used to interact with the Supabase.
 
 - **Frontend**:
-  - `src/pages/`: Direktori yang berisi halaman-halaman utama situs web, seperti halaman beranda, halaman blog post, dan halaman profil pengguna.
-  - `src/components/`: Komponen UI yang dapat digunakan kembali, seperti header, footer, dan form komentar.
-  - `public/`: Direktori yang berisi aset statis seperti gambar dan stylesheet.
+  - `src/pages/`: A directory containing the main pages of the website, such as the home page, blog post page, and user profile page.
+  - `src/components/`: Reusable UI components, such as headers, footers, and comment forms.
+  - `public/`: A directory containing static assets such as images and stylesheets.
 
-- **Konfigurasi**:
-  - `.env`: File konfigurasi lingkungan yang menyimpan variabel lingkungan seperti kunci API Supabase dan informasi koneksi database.
+- **Configuration**:
+  - `.env`: Environment configuration file that stores environment variables such as Supabase API keys and database connection information.
 
-#### **5. Alur Pengembangan**
+#### **5. Development Flow**
 
-    1. **Setup Proyek**:
-   - Inisialisasi proyek dengan Node.js dan instal semua dependensi yang diperlukan (`express`, `supabase`, `astro`, dll).
-   - Konfigurasi Supabase dan buat proyek baru, serta atur database dan tabel yang diperlukan (users, posts, comments).
+    1. **Project Setup**:
+   - Initialise the project with Node.js and install all necessary dependencies (`express`, `supabase`, `astro`, etc).
+   - Configure the Supabase and create a new project, and set up the required database and tables (users, posts, comments).
 
-    2. **Bangun Backend**:
-   - Buat server Express dan tentukan routing untuk operasi CRUD pada blog post, pengguna, dan komentar.
-   - Integrasi dengan Supabase untuk menyimpan dan mengambil data.
+    2. **Build Backend**:
+   - Create an Express server and define routing for CRUD operations on blog posts, users, and comments.
+   - Integrate with Supabase to store and retrieve data.
 
-    3. **Bangun Frontend**:
-   - Gunakan Astro untuk membuat halaman dan komponen UI.
-   - Integrasi dengan backend melalui API yang disediakan oleh server Express.
+    3. **Build Frontend**:
+   - Use Astro to create pages and UI components.
+   - Integrate with the backend through the API provided by the Express server.
 
-    4. **Pengujian dan Deployment**:
-   - Uji aplikasi secara lokal untuk memastikan semua fitur berfungsi dengan benar.
-   - Deploy aplikasi ke platform hosting pilihan, seperti Vercel untuk frontend dan Heroku untuk backend.
+    4. **Testing and Deployment**:
+   - Test the application locally to ensure all features work correctly.
+   - Deploy the application to a hosting platform of choice, such as Vercel for the frontend and Heroku for the backend.
 
-#### **6. Kesimpulan**
-Proyek Portal Blog ini menunjukkan bagaimana stack SEAN (Supabase, Express, Astro, Node.js) dapat digunakan untuk membangun aplikasi web modern yang responsif dan berperforma tinggi. Dengan menggunakan teknologi-teknologi ini, kita dapat dengan mudah mengelola data, menyediakan autentikasi pengguna yang aman, dan membangun antarmuka pengguna yang ramah dan cepat.
+#### **6. Conclusion**
+This Blog Portal project demonstrates how the SEAN stack (Supabase, Express, Astro, Node.js) can be used to build modern responsive and high-performance web applications. Using these technologies, we can easily manage data, provide secure user authentication, and build friendly and fast user interfaces.
 
 ## Setup
 
-Berikut adalah instruksi langkah demi langkah untuk mengatur proyek ini di lingkungan lokal untuk setiap stack yang digunakan:
+Here are step-by-step instructions for setting up this project in the local environment for each stack used:
 
 ### Frontend: Astro
 
-1. Clone repositori ini dengan `git clone <url-repo>`.
-2. Pindah ke direktori proyek dengan `cd <nama-repo>`.
-3. Install dependencies dengan `npm install`.
-4. Jalankan server pengembangan lokal dengan `npm run dev`.
+1. Clone this repository with `git clone <url-repo>`.
+2. Move to the project directory with `cd <url-repo>`.
+3. Install dependencies with `npm install`.
+4. Run the local development server with `npm run dev`.
 
 ### Backend: Node.js, Express.js
 
-1. Clone repositori ini dengan `git clone <url-repo>`.
-2. Pindah ke direktori proyek dengan `cd <nama-repo>`.
-3. Install dependencies dengan `npm install`.
-4. Buat file `.env` dan isi variabel lingkungan yang diperlukan (misalnya, `DATABASE_URL` untuk URL database).
-5. Jalankan server dengan `npm start`.
+1. Clone this repository with `git clone <url-repo>`.
+2. Move to the project directory with `cd <url-repo>`.
+3. Install dependencies with `npm install`.
+4. Create the `.env` file and fill in the necessary environment variables (for example, `DATABASE_URL` for the database URL).
+5. Run the server with `npm start`.
 
 ### Database: Supabase
 
-1. Buat akun di [Supabase](https://supabase.io/).
-2. Buat proyek baru dan ikuti petunjuk untuk mengatur database.
-3. Dalam file `.env` di proyek backend Anda, set `SUPABASE_URL` dan `SUPABASE_KEY` dengan nilai yang disediakan oleh Supabase.
-## Penggunaan
+1. Create an account on [Supabase](https://supabase.io/).
+2. Create a new project and follow the instructions to set up the database.
+3. In the `.env` file in your backend project, set `SUPABASE_URL` and `SUPABASE_KEY` to the values provided by Supabase.
+
+## Usage
 
 ### GET
 ```
 /**
- * Mengambil blog dengan ID yang diberikan.
+ * Retrieves the blog with the given ID.
  *
- * @param {string} id - ID blog yang akan diambil.
- * @returns {object} - Objek respons yang berisi pesan sukses.
+ * @param {string} id - ID of the blog to retrieve.
+ * @returns {object} - A response object containing a success message.
  */
-app.get('/:id', (req, res) => {
+app.get(‘/:id’, (req, res) => {
     const id = req.params.id;
     
-    // Lakukan logika untuk mengambil blog dengan ID yang diberikan
+    // Do the logic to retrieve the blog with the given ID
     
-    const blog = // Lakukan pengambilan blog dari database berdasarkan ID
+    const blog = // Retrieve the blog from the database based on the ID
     
     if (!blog) {
-        return res.status(404).json({ message: 'Blog not found' });
+        return res.status(404).json({ message: ‘Blog not found’ });
     }
     
-    return res.json({ message: 'Blog retrieved successfully', blog });
+    return res.json({ message: ‘Blog retrieved successfully’, blog });
 });
 ```
 
 ### POST
 ```
 /**
- * Membuat blog baru.
+ * Create a new blog.
  *
- * @param {object} req - Objek permintaan yang berisi data blog yang akan dibuat.
- * @param {object} res - Objek respons yang akan mengembalikan pesan sukses.
+ * @param {object} req - A request object containing the blog data to be created.
+ * @param {object} res - A response object that will return a success message.
  */
-app.post('/', (req, res) => {
+app.post(‘/’, (req, res) => {
     const { title, content } = req.body;
     
-    // Lakukan logika untuk membuat blog baru
+    // Do the logic to create a new blog
     
     const newBlog = {
-        id: "456",
+        id: ‘456’,
         title,
         content
     };
     
-    return res.status(201).json({ message: 'Blog created successfully', blog: newBlog });
+    return res.status(201).json({ message: ‘Blog created successfully’, blog: newBlog });
 });
 ```
 
@@ -146,76 +147,78 @@ app.post('/', (req, res) => {
 http://localhost:3030/
 ```
 
-**Respons:**
+**Response:**
 
 ```json
 {
-    "message": "Blog retrieved successfully",
-    "blog": {
-        "id": "123",
-        "title": "Sample Blog",
-        "content": "This is a sample blog post"
+    ‘message’: ‘Blog retrieved successfully’,
+    ‘blog’: {
+        ‘id’: ‘123’,
+        ‘title’: ‘Sample Blog’,
+        ‘content’: ‘This is a sample blog post’
     }
 }
 ```
+
 ## Tech Stack
 
 **Client:** Astro
 
 ### Frontend: Astro
 
-[Astro](https://astro.build/) adalah generator situs statis modern yang memungkinkan Anda membangun situs web yang lebih cepat dengan kurang JavaScript. Astro memungkinkan Anda menulis komponen dalam bahasa favorit Anda (seperti JavaScript, TypeScript, JSX, dan lainnya) dan kemudian merendernya sebagai HTML statis pada build time. Hasilnya adalah situs web yang sangat cepat dan optimal.
+[Astro (https://astro.build/) is a modern static site generator that lets you build faster websites with less JavaScript. Astro lets you write components in your favourite languages (such as JavaScript, TypeScript, JSX and more) and then render them as static HTML at build time. The result is an extremely fast and optimised website.
 
-**Server:** Node, Express
+**Servers:** Node, Express
 
 ### Backend: Node.js, Express.js
 
-[Node.js](https://nodejs.org/) adalah runtime JavaScript yang memungkinkan Anda menjalankan JavaScript di server. Node.js sangat populer untuk pengembangan backend karena memungkinkan Anda menggunakan JavaScript, bahasa yang sudah dikenal oleh banyak pengembang frontend, di server.
+[Node.js](https://nodejs.org/) is a JavaScript runtime that lets you run JavaScript on a server. Node.js is very popular for backend development because it allows you to use JavaScript, a language that many frontend developers are familiar with, on the server.
 
-[Express.js](https://expressjs.com/) adalah framework web untuk Node.js yang menyederhanakan pengembangan aplikasi web. Express.js menyediakan fitur-fitur seperti routing, middleware, dan template engine, yang membuatnya lebih mudah untuk membangun aplikasi web dan API.
+[Express.js](https://expressjs.com/) is a web framework for Node.js that simplifies web application development. Express.js provides features such as routing, middleware, and template engine, which make it easier to build web applications and APIs.
 
 **Database:** Supabase
 
 ### Database: Supabase
 
-[Supabase](https://supabase.io/) adalah alternatif open source untuk Firebase. Seperti Firebase, Supabase menyediakan berbagai layanan backend seperti database real-time, autentikasi, penyimpanan, dan fungsi serverless. Namun, berbeda dengan Firebase, Supabase menggunakan PostgreSQL, sebuah database SQL yang kuat dan fleksibel, sebagai database utamanya.
-## Installation NODE JS
-Instalasi Node.js pada sistem operasi yang berbeda memiliki sedikit perbedaan. Berikut ini adalah panduan instalasi untuk berbagai sistem operasi: Windows, macOS, dan Linux.
+[Supabase](https://supabase.io/) is an open source alternative to Firebase. Like Firebase, Supabase provides various backend services such as real-time database, authentication, storage, and serverless functions. However, unlike Firebase, Supabase uses PostgreSQL, a powerful and flexible SQL database, as its main database.
+
+## NODE JS Installation
+Node.js installation on different operating systems has slight differences. The following is an installation guide for various operating systems: Windows, macOS, and Linux.
 
 ### Windows
 
-1. **Unduh Installer Node.js**:
-   Kunjungi [situs resmi Node.js](https://nodejs.org/) dan unduh installer Windows yang sesuai (LTS atau Current).
+1. **Download the Node.js Installer**:
+   Visit the [official Node.js website](https://nodejs.org/) and download the appropriate Windows installer (LTS or Current).
 
-2. **Jalankan Installer**:
-   Jalankan file installer yang telah diunduh (`.msi`). Ini akan membuka jendela setup.
+2. **Run the Installer**:
+   Run the downloaded installer file (`.msi`). This will open the setup window.
 
-3. **Ikuti Panduan Instalasi**:
-   Ikuti langkah-langkah yang ditunjukkan oleh installer. Biasanya Anda hanya perlu menekan tombol "Next" beberapa kali dan menyetujui lisensi. Pastikan untuk mencentang opsi "Automatically install the necessary tools" jika ditawarkan.
+3. **Follow the Installation Guide**:
+   Follow the steps indicated by the installer. Usually you just need to press the ‘Next’ button a few times and agree to the licence. Make sure to tick the ‘Automatically install the necessary tools’ option if offered.
 
-4. **Verifikasi Instalasi**:
-   Setelah instalasi selesai, buka Command Prompt atau PowerShell, kemudian jalankan perintah berikut untuk memastikan Node.js dan npm telah terinstal dengan benar:
+4. **Verify Installation**:
+   Once the installation is complete, open Command Prompt or PowerShell, and run the following commands to make sure Node.js and npm are installed correctly:
    ```bash
    node -v
    ```
    ```bash
    npm -v
    ```
-   Perintah tersebut akan menampilkan versi Node.js dan npm yang telah terinstal.
+   The command will display the installed versions of Node.js and npm.
 
 ### macOS
 
-1. **Menggunakan Homebrew**:
-   Jika Anda menggunakan Homebrew, instalasi Node.js sangat sederhana. Jalankan perintah berikut di Terminal:
-   ```bash
+1. **Using Homebrew**:
+   If you are using Homebrew, installing Node.js is very simple. Run the following command in Terminal:
+   ``bash
    brew install node
    ```
 
-2. **Unduh Installer Node.js**:
-   Alternatifnya, Anda bisa mengunduh installer dari [situs resmi Node.js](https://nodejs.org/). Unduh versi macOS (`.pkg`) dan jalankan installer tersebut.
+2. **Download the Node.js Installer**:
+   Alternatively, you can download the installer from [the official Node.js website](https://nodejs.org/). Download the macOS version (`.pkg`) and run the installer.
 
-3. **Verifikasi Instalasi**:
-   Buka Terminal dan jalankan perintah berikut untuk memastikan Node.js dan npm telah terinstal dengan benar:
+3. **Verify Installation**:
+   Open Terminal and run the following commands to make sure Node.js and npm are installed correctly:
    ```bash
    node -v
    ```
@@ -225,30 +228,30 @@ Instalasi Node.js pada sistem operasi yang berbeda memiliki sedikit perbedaan. B
 
 ### Linux
 
-Instalasi Node.js di Linux bisa dilakukan dengan beberapa cara, salah satu cara yang direkomendasikan adalah menggunakan Node Version Manager (nvm).
+Installing Node.js on Linux can be done in several ways, one of the recommended ways is using the Node Version Manager (nvm).
 
-1. **Instal nvm**:
-   Jalankan perintah berikut untuk mengunduh dan menginstal nvm:
-   ```bash
+1. **Install nvm**:
+   Run the following command to download and install nvm:
+   ``bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
    ```
-   Setelah instalasi selesai, tutup dan buka kembali terminal atau jalankan perintah berikut untuk memuat nvm:
+   Once the installation is complete, close and reopen the terminal or run the following command to load nvm:
    ```bash
    source ~/.bashrc
    ```
 
-2. **Instal Node.js Menggunakan nvm**:
-   Dengan nvm terinstal, Anda dapat menginstal Node.js versi terbaru dengan perintah:
-   ```bash
+2. **Install Node.js Using nvm**:
+   With nvm installed, you can install the latest version of Node.js with the command:
+   ``bash
    nvm install node
    ```
-   Anda juga bisa menginstal versi spesifik, misalnya:
+   You can also install a specific version, for example:
    ```bash
    nvm install 14.17.0
    ```
 
-3. **Verifikasi Instalasi**:
-   Jalankan perintah berikut untuk memastikan Node.js dan npm telah terinstal dengan benar:
+3. **Verify Installation**:
+   Run the following command to make sure Node.js and npm are installed correctly:
    ```bash
    node -v
    ```
@@ -256,42 +259,43 @@ Instalasi Node.js di Linux bisa dilakukan dengan beberapa cara, salah satu cara 
    npm -v
    ```
 
-Dengan mengikuti panduan di atas sesuai dengan sistem operasi yang Anda gunakan, Anda dapat menginstal Node.js dengan mudah dan mulai mengembangkan aplikasi JavaScript di lingkungan lokal Anda.
+By following the above guide according to the operating system you are using, you can easily install Node.js and start developing JavaScript applications in your local environment.
 
-## Installation ASTRO
-Astro adalah framework modern untuk membangun situs statis yang cepat. Instalasi Astro cukup sederhana dan dapat dilakukan dengan mengikuti beberapa langkah dasar. Berikut ini adalah panduan umum untuk menginstal Astro:
+## ASTRO Installation
+Astro is a modern framework for building fast, static websites. Installing Astro is quite simple and can be done by following a few basic steps. The following is a general guide to installing Astro:
 
-### Prasyarat
-1. **Node.js**: Pastikan Anda memiliki Node.js versi terbaru yang sudah terinstal di komputer Anda. Anda dapat mengunduhnya dari [situs resmi Node.js](https://nodejs.org/).
+### Prerequisites
+1. **Node.js**: Make sure you have the latest version of Node.js installed on your computer. You can download it from [official Node.js website](https://nodejs.org/).
 
-2. **npm**: npm biasanya sudah terinstal bersama Node.js. Namun, jika Anda lebih suka menggunakan yarn, itu juga didukung.
+2. **npm**: npm is usually pre-installed with Node.js. However, if you prefer to use yarn, it is also supported.
 
-### Langkah-langkah Instalasi Astro
+### Astro Installation Steps
 
-1. **Buat Proyek Baru dengan Astro**:
-   Anda dapat membuat proyek baru dengan menggunakan perintah `npm init astro` atau `yarn create astro`. Berikut contoh menggunakan npm:
+1. **Create a New Project with Astro**:
+   You can create a new project by using the `npm init astro` or `yarn create astro` command. Here's an example using npm:
    ```bash
    npm init astro
    ```
 
-2. **Ikuti Panduan Interaktif**:
-   Setelah menjalankan perintah di atas, Anda akan diminta untuk menjawab beberapa pertanyaan untuk mengonfigurasi proyek Anda, seperti nama proyek dan template yang ingin digunakan.
+2. **Follow the Interactive Guide**:
+   After running the above command, you will be prompted to answer a few questions to configure your project, such as the project name and the template you want to use.
 
-3. **Pindah ke Direktori Proyek**:
-   Pindah ke direktori proyek yang baru dibuat:
+3. **Move to Project Directory**:
+   Move to the directory of the newly created project:
    ```bash
-   cd nama-proyek-anda
+   cd your-project-name
    ```
 
-4. **Instal Dependensi**:
-   Setelah membuat proyek dan berpindah ke direktori proyek, instal semua dependensi yang diperlukan dengan perintah:
+4. **Install Dependencies**:
+   After creating the project and moving to the project directory, install all the required dependencies with the command:
    ```bash
    npm install
    ```
-   atau jika menggunakan yarn:
+   or if using yarn:
    ```bash
    yarn install
    ```
+
 
 5. **Jalankan Server Pengembangan**:
    Setelah semua dependensi terinstal, Anda bisa memulai server pengembangan dengan perintah:
@@ -303,54 +307,55 @@ Astro adalah framework modern untuk membangun situs statis yang cepat. Instalasi
    yarn dev
    ```
 
-   Server pengembangan akan berjalan dan Anda bisa mengakses proyek Anda melalui browser dengan membuka `http://localhost:3000` sebagai contoh.
+   The development server will be running and you can access your project through your browser by going to `http://localhost:3000` for example.
 
-### Menyebarkan Proyek Astro
-Setelah selesai mengembangkan situs Anda dengan Astro, Anda dapat membangunnya untuk produksi dan menyebarkannya. Untuk membangun proyek, gunakan perintah berikut:
-```bash
+### Deploying an Astro Project
+Once you have finished developing your site with Astro, you can build it for production and deploy it. To build the project, use the following command:
+``bash
 npm run build
 ```
-atau
-```bash
+or
+``bash
 yarn build
 ```
 
-Proyek Anda akan dibangun dan outputnya akan berada di folder `dist` (atau yang ditentukan dalam konfigurasi Astro). Anda dapat menyebarkan isi folder ini ke hosting statis pilihan Anda, seperti Netlify, Vercel, atau GitHub Pages.
+Your project will be built and the output will reside in the `dist` folder (or the one specified in the Astro configuration). You can deploy the contents of this folder to a static host of your choice, such as Netlify, Vercel, or GitHub Pages.
 
-### Catatan Tambahan
-- **Dokumentasi Resmi**: Untuk informasi lebih lanjut dan panduan mendetail, kunjungi [dokumentasi resmi Astro](https://docs.astro.build/).
-- **Template dan Contoh Proyek**: Astro menyediakan berbagai template dan contoh proyek yang bisa membantu Anda memulai dengan cepat.
+### Additional Notes
+- **Authorised Documentation**: For more information and detailed guides, visit [Astro official documentation](https://docs.astro.build/).
+- **Templates and Sample Projects**: Astro provides various templates and sample projects that can help you get started quickly.
 
-Dengan mengikuti langkah-langkah di atas, Anda seharusnya bisa menginstal dan memulai proyek dengan Astro tanpa masalah. Selamat mencoba!.
+By following the steps above, you should be able to install and start a project with Astro without any problems. Good luck!
 
-## Kontribusi
+## Contribution
 
-Jika Anda ingin berkontribusi ke proyek ini, Anda dapat mengikuti langkah-langkah berikut:
+If you would like to contribute to this project, you can follow these steps:
 
-1. Fork repositori ini ke akun GitHub Anda.
-2. Clone repositori hasil fork ke komputer lokal Anda.
-3. Pindah ke direktori proyek dengan `cd <nama-repo>`.
-4. Buat branch baru untuk fitur atau perbaikan yang akan Anda tambahkan dengan `git checkout -b <nama-branch>`.
-5. Lakukan perubahan yang diperlukan pada kode.
-6. Commit perubahan Anda dengan pesan yang jelas dan deskriptif menggunakan `git commit -m "Deskripsi perubahan"`.
-7. Push branch ke repositori GitHub Anda dengan `git push origin <nama-branch>`.
-8. Buka halaman repositori hasil fork di GitHub dan buat pull request baru.
-9. Isi deskripsi pull request dengan jelas menjelaskan perubahan yang Anda buat.
-10. Tunggu tanggapan dan diskusi dari pemilik repositori.
+1. Fork this repository to your GitHub account.
+2. Clone the forked repository to your local computer.
+3. Move to the project directory with `cd <repo-name>`.
+4. Create a new branch for the feature or fix you want to add with `git checkout -b <branch-name>`.
+5. Make the necessary changes to the code.
+6. Commit your changes with a clear and descriptive message using `git commit -m ‘Description of changes’`.
+7. Push the branch to your GitHub repository with `git push origin <branch-name>`.
+8. Open the forked repository page on GitHub and create a new pull request.
+9. Fill in the pull request description clearly explaining the changes you made.
+10. Wait for a response and discussion from the repository owner.
 
-Pastikan untuk mengikuti aturan dan pedoman kontribusi yang ditetapkan oleh proyek ini. Ini mungkin termasuk hal-hal seperti kode etik, gaya penulisan, dan proses review kode.
+Be sure to follow the rules and contribution guidelines set by this project. These may include things like code of conduct, writing style, and code review process.
 
-Proses pull request melibatkan mengusulkan perubahan kode ke repositori utama. Setelah pull request dibuat, pemilik repositori akan meninjau perubahan Anda dan memutuskan apakah akan menggabungkannya ke repositori utama atau tidak. Diskusi dan perbaikan mungkin diperlukan sebelum pull request dapat diterima.
+The pull request process involves proposing code changes to the main repository. Once a pull request is made, the repository owner will review your changes and decide whether or not to merge them into the main repository. Discussions and fixes may be required before the pull request can be accepted.
 
-Pastikan untuk memahami dan mengikuti proses pull request yang ditetapkan oleh proyek ini. Ini mungkin termasuk langkah-langkah seperti pengujian kode, peninjauan kode oleh rekan kerja, dan persyaratan dokumentasi.
+Be sure to understand and follow the pull request process established by this project. This may include steps such as code testing, peer review of code, and documentation requirements.
 
-Selalu berkomunikasi dengan pemilik repositori dan tim proyek untuk memastikan bahwa kontribusi Anda sesuai dengan kebutuhan dan harapan mereka.
+Always communicate with the repository owner and project team to ensure that your contributions match their needs and expectations.
 
 **Developed by: Muhamad Nur Arif**
 
 **Website:** https://arifsuz.vercel.app/
 
 **LinkedIn:** https://www.linkedin.com/in/marif8/
+
 ## License
 
 [MIT License](https://choosealicense.com/licenses/mit/)
