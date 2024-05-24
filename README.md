@@ -111,10 +111,10 @@ app.get(‘/:id’, (req, res) => {
     const blog = // Retrieve the blog from the database based on the ID
     
     if (!blog) {
-        return res.status(404).json({ message: ‘Blog not found’ });
+        return res.status(404).json({ message: 'Blog not found' });
     }
     
-    return res.json({ message: ‘Blog retrieved successfully’, blog });
+    return res.json({ message: 'Blog retrieved successfully', blog });
 });
 ```
 
@@ -126,18 +126,18 @@ app.get(‘/:id’, (req, res) => {
  * @param {object} req - A request object containing the blog data to be created.
  * @param {object} res - A response object that will return a success message.
  */
-app.post(‘/’, (req, res) => {
+app.post('/', (req, res) => {
     const { title, content } = req.body;
     
     // Do the logic to create a new blog
     
     const newBlog = {
-        id: ‘456’,
+        id: "456",
         title,
         content
     };
     
-    return res.status(201).json({ message: ‘Blog created successfully’, blog: newBlog });
+    return res.status(201).json({ message: 'Blog created successfully', blog: newBlog });
 });
 ```
 
@@ -151,11 +151,12 @@ http://localhost:3030/
 
 ```json
 {
-    ‘message’: ‘Blog retrieved successfully’,
-    ‘blog’: {
-        ‘id’: ‘123’,
-        ‘title’: ‘Sample Blog’,
-        ‘content’: ‘This is a sample blog post’
+    "message": "Blog retrieved successfully",
+    "blog": {
+        "id": "123",
+        "title": "Sample Blog",
+        "content": "This is a sample blog post"
+    }
 }
 ```
 
@@ -165,7 +166,7 @@ http://localhost:3030/
 
 ### Frontend: Astro
 
-[Astro (https://astro.build/) is a modern static site generator that lets you build faster websites with less JavaScript. Astro lets you write components in your favourite languages (such as JavaScript, TypeScript, JSX and more) and then render them as static HTML at build time. The result is an extremely fast and optimised website.
+[Astro](https://astro.build/) is a modern static site generator that lets you build faster websites with less JavaScript. Astro lets you write components in your favourite languages (such as JavaScript, TypeScript, JSX and more) and then render them as static HTML at build time. The result is an extremely fast and optimised website.
 
 **Servers:** Node, Express
 
