@@ -61,7 +61,7 @@ This Blog Portal project is a modern and responsive blogging platform, built usi
    - Use Astro to create pages and UI components.
    - Integrate with the backend through the API provided by the Express server.
 
-    4. **Testing and Deployment**:
+   4. **Testing and Deployment**:
    - Test the application locally to ensure all features work correctly.
    - Deploy the application to a hosting platform of choice, such as Vercel for the frontend and Heroku for the backend.
 
