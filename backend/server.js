@@ -1,16 +1,16 @@
+require('dotenv').config();
 const express = require('express');
-const supabase = require('@supabase/supabase-js');
+const { createClient } = require('@supabase/supabase-js');
 const cors = require('cors');
-
 const app = express();
 app.use(cors());
 app.use(express.json());
 const PORT = 3030;
 
-const SUPABASE_URL = 'https://xhvtxwdlmwamjnxkojvh.supabase.co';
-const SUPABASE_SERVICE_ROLE = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhodnR4d2RsbXdhbWpueGtvanZoIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcxNjQ4MTgzMCwiZXhwIjoyMDMyMDU3ODMwfQ.WfuUBx7XGFDD_R6K0E9jjpcsdswU_etRO7tp0t_lafQ';
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_SERVICE_ROLE = process.env.SUPABASE_SERVICE_ROLE;
 
-const db = supabase.createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE);
+const db = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE);
 
 app.get('/', async(req, res) => {
     const getBlog = await db.from("blog").select();
